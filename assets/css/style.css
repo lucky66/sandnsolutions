@@ -279,7 +279,6 @@ h6 {
 
 .logo-header {
   width: 200px;
-  height: ;
 }
 
 .fbs__net-navbar {
@@ -1217,6 +1216,73 @@ h6 {
 .footer .credits {
   font-size: 13.5px;
 }
+
+/* start-map */
+    .map-container {
+      position: relative;
+      max-width: 1200px;
+      width: 100%;
+    }
+
+    /* Make the map gray */
+    .map-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+      filter: grayscale(50%) brightness(100%);
+    }
+
+    /* Pin Styles */
+    .pin {
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      background-color: #ff4b4b;
+      border: 2px solid white;
+      border-radius: 50%;
+      box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+      animation: pulse 1.5s infinite;
+    }
+
+    /* Pulse animation for pins */
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      50% {
+        transform: scale(1.3);
+        opacity: 0.7;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    /* Labels */
+    .label {
+      position: absolute;
+      background-color: white;
+      padding: 8px 14px;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      font-size: 14px;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      max-width: 180px;
+      z-index: 10;
+    }
+
+    /* Connecting Lines */
+    .line {
+      position: absolute;
+      height: 2px;
+      background-color: #000;
+      transform-origin: left center;
+      z-index: 5;
+    }
+/* end-map */
 
 #back-to-top {
   position: fixed;
